@@ -37,27 +37,48 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Main Screen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nIM-2P-gO8">
-                                <rect key="frame" x="106" y="405.66666666666669" width="181" height="41"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tUp-xp-Ygq">
-                                <rect key="frame" x="159" y="495" width="75" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tUp-xp-Ygq">
+                                <rect key="frame" x="159" y="408.66666666666669" width="75" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                 <connections>
                                     <segue destination="pcC-7P-qlP" kind="show" id="r7R-Iw-oD8"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MY LOCATION" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P8t-SA-NN2">
+                                <rect key="frame" x="140.66666666666666" y="170" width="112" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="wjR-ro-gPR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aoy-QA-esb">
+                                <rect key="frame" x="167" y="199" width="59" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="41" id="FW1-ec-fVE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="tUp-xp-Ygq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7U9-bA-KKk"/>
+                            <constraint firstItem="P8t-SA-NN2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FFw-BD-Sas"/>
+                            <constraint firstItem="P8t-SA-NN2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="Jdx-u8-UwO"/>
+                            <constraint firstItem="aoy-QA-esb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NSU-Tw-ePw"/>
+                            <constraint firstItem="aoy-QA-esb" firstAttribute="top" secondItem="P8t-SA-NN2" secondAttribute="bottom" constant="8" id="WfZ-SL-p8l"/>
+                            <constraint firstItem="tUp-xp-Ygq" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="zpU-xU-FpO"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="DE2-vn-b9j"/>
+                    <connections>
+                        <outlet property="cityLabel" destination="aoy-QA-esb" id="94G-x4-tjf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
