@@ -47,18 +47,18 @@
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MY LOCATION" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P8t-SA-NN2">
                                 <rect key="frame" x="140.66666666666666" y="170" width="112" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="wjR-ro-gPR"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aoy-QA-esb">
-                                <rect key="frame" x="167" y="199" width="59" height="41"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="41" id="FW1-ec-fVE"/>
-                                </constraints>
+                                <rect key="frame" x="177.66666666666666" y="199" width="38" height="26.333333333333343"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temperature" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3K9-9i-kP6">
+                                <rect key="frame" x="105" y="241.33333333333334" width="183" height="40.666666666666657"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -67,17 +67,20 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="3K9-9i-kP6" firstAttribute="top" secondItem="aoy-QA-esb" secondAttribute="bottom" constant="16" id="09K-bh-fKE"/>
                             <constraint firstItem="tUp-xp-Ygq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7U9-bA-KKk"/>
                             <constraint firstItem="P8t-SA-NN2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FFw-BD-Sas"/>
                             <constraint firstItem="P8t-SA-NN2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="Jdx-u8-UwO"/>
                             <constraint firstItem="aoy-QA-esb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NSU-Tw-ePw"/>
                             <constraint firstItem="aoy-QA-esb" firstAttribute="top" secondItem="P8t-SA-NN2" secondAttribute="bottom" constant="8" id="WfZ-SL-p8l"/>
+                            <constraint firstItem="3K9-9i-kP6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rtD-Pw-sXH"/>
                             <constraint firstItem="tUp-xp-Ygq" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="zpU-xU-FpO"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="DE2-vn-b9j"/>
                     <connections>
                         <outlet property="cityLabel" destination="aoy-QA-esb" id="94G-x4-tjf"/>
+                        <outlet property="temperatureLabel" destination="3K9-9i-kP6" id="oAh-h6-I1Q"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
