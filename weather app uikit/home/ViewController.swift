@@ -16,6 +16,7 @@ class ViewController: UIViewController {
     
     private let locationManager: LocationManager = LocationManager()
     private let weatherManager: WeatherManager = WeatherManager()
+    private let helper: Helper = Helper()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,21 +31,9 @@ class ViewController: UIViewController {
                 self.temperatureLabel.text = "\(weatherData.current.temp_c) °C"
                 self.conditionLabel.text = weatherData.current.condition.text
                 let _url = URL(string: "https:\(weatherData.current.condition.icon)")!
-                self.loadIcon(fromUrl: _url)
+                helper.loadIcon(fromUrl: _url, to: self.iconImg)
             }
         }
-    }
-
-    func loadIcon(fromUrl: URL) {
-        URLSession.shared.dataTask(with: fromUrl) { data, response, error in
-            if let data = data, let image = UIImage(data: data) {
-                DispatchQueue.main.async {
-                    self.iconImg.image = image
-                }
-            } else {
-                print("Failed to load image", error ?? "Uknown error")
-            }
-        }.resume()
     }
 }
 
