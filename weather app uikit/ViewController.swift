@@ -10,6 +10,7 @@ import CoreLocation
 
 class ViewController: UIViewController {
     @IBOutlet weak var cityLabel: UILabel!
+    @IBOutlet weak var temperatureLabel: UILabel!
     
     let WEATHER_API_KEY: String = "347b203f58ab437cb9c115827251309"
     
@@ -38,8 +39,12 @@ class ViewController: UIViewController {
             
             if let _location = json["location"] as? [String: Any],
                let _city = _location["name"] as? String{
-                print("HI NAM \(_location) - \(_city)")
                 self.cityLabel.text = "\(_city) city"
+            }
+            
+            if let _current = json["current"] as? [String: Any],
+               let _temp_c = _current["temp_c"] as? Double{
+                self.temperatureLabel.text = "\(_temp_c) °C"
             }
         } catch {
             print("Error: \(error)")
