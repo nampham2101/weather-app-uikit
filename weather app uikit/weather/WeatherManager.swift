@@ -18,8 +18,10 @@ class WeatherManager {
     
     private func fetchData(location: CLLocation, url: URL) async -> WeatherData? {
         do {
-            let (data, _) = try await URLSession.shared.data(from: url)
-            return try JSONDecoder().decode(WeatherData.self, from: data)
+            return try await NetworkManager.shared.request(url, type: WeatherData.self)
+        } catch let apiError as ApiError {
+            print("NAMPHAM - API Error: \(NetworkManager.shared.getErrorMessage(apiError))")
+            return nil
         } catch {
             print("Fectching data failed: \(error)")
             return nil
